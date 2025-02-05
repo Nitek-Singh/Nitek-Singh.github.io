@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        /* Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+
+        /* Pop-up Section Styles */
+        .popup-section {
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #FF4D99, #FF1A75);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .popup-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+            color: #fff;
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Button Styles */
+        .popup-section button {
+            padding: 15px 40px;
+            font-size: 1.4em;
+            margin: 15px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            background-color: #FF1A75;
+            color: white;
+            font-weight: bold;
+        }
+
+        .popup-section button:hover {
+            background-color: #FF4D99;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Hover Effect for 'No' button */
+        .no-btn {
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .no-btn:hover {
+            transform: translateX(150px) translateY(40px); /* Moves far away on hover */
+            background-color: #FF3366;
+        }
+
+        /* 'Yes' button animation on hover */
+        .yes-btn:hover {
+            transform: scale(1.2) rotate(-5deg);
+            background-color: #FF4D99;
+        }
+
+        /* Answer Text Style */
+        .popup-section p {
+            margin-top: 25px;
+            font-size: 1.6em;
+            color: #FFF;
+            font-family: 'Georgia', serif;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Pop-up Section -->
+        <section class="popup-section">
+            <h2>"You are my today and all of my tomorrows"</h2>
+            <p>Will you be my Valentine?</p>
+            <button class="btn yes-btn" onclick="showAnswer(true)">Yes, I will!</button>
+            <button class="btn no-btn" onclick="showAnswer(false)" id="no-btn">Yessss..</button>
+            <p id="answer"></p>
+        </section>
+    </div>
+
+    <script>
+        function showAnswer(answer) {
+            const answerText = document.getElementById("answer");
+            const noButton = document.getElementById("no-btn");
+
+            if (answer) {
+                answerText.textContent = "Yay! I'm so happy! ❤️, I love you baby 😘 ";
+                noButton.style.pointerEvents = "none"; // Disables interaction after "Yes" is selected
+            } else {
+                answerText.textContent = "Hurrah! I'm so happy! ❤️, I love you baby 😘 ";
+            }
+        }
+    </script>
+</body>
+</html>

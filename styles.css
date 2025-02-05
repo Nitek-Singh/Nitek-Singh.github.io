@@ -1,0 +1,306 @@
+/* Global Styles */
+body {
+  font-family: 'Georgia', serif; /* Elegant serif font */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #FFB3C1, #FFC0CB); /* Soft pink gradient */
+  color: #fff;
+  transition: background 0.5s ease;
+}
+
+/* Container Styles */
+.container {
+  text-align: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+section {
+  margin: 50px 0;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Section */
+.welcome {
+  background-color: #ff66b2; /* Soft pink */
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.welcome h1 {
+  font-size: 3em;
+}
+
+.welcome p {
+  font-size: 1.5em;
+  color: #fff9f9;
+}
+
+/* Countdown Section */
+.countdown-section {
+  background-color: #ff4d99; /* Romantic pink */
+}
+
+.countdown {
+  font-size: 2.5em;
+  margin-top: 20px;
+  color: #fff9f9;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Memory Lane Section */
+.memory-lane-section {
+  background-color: #ff4d99; /* Romantic pink */
+}
+
+.memory-lane-section h2 {
+  font-size: 2em;
+  color: #fff;
+}
+
+.memory-lane-section .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.memory-lane-section .gallery img {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  border: 5px solid #ff99cc; /* Light pink border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.memory-lane-section .gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(255, 153, 204, 0.5);
+}
+
+/* Love Things Section */
+.love-things-section {
+  background-color: #ffb3d9; /* Soft light pink */
+}
+
+.love-things-section h2 {
+  font-size: 2em;
+  color: #fff;
+}
+
+#love-list {
+  list-style-type: none;
+  padding: 0;
+  color: #ffe6f2;
+  font-size: 1.4em;
+}
+
+#love-list li {
+  margin: 15px 0;
+  padding: 10px;
+  border: 2px solid #ff66b2; /* Soft pink border */
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#love-list li:hover {
+  background-color: rgba(255, 153, 204, 0.3);
+  transform: scale(1.05);
+}
+
+/* Popup Section */
+.popup-section {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  padding: 50px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.popup-section h2 {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.popup-section button {
+  padding: 20px 40px;
+  font-size: 1.4em;
+  background-color: #FF4D99;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s ease;
+}
+
+.popup-section button:hover {
+  background-color: #FF1A75;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 26, 117, 0.5);
+}
+
+/* Button Styles */
+.btn {
+  text-decoration: none;
+  padding: 20px 40px;
+  font-size: 1.4em;
+  background-color: #FF66B2;
+  color: white;
+  border-radius: 50px;
+  margin: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #FF1A75;
+}
+
+/* Animations */
+@keyframes popIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.container {
+  animation: popIn 1s ease;
+}
+
+h1, p, h2 {
+  animation: popIn 1.5s ease;
+}
+
+/* Mobile-Friendly Adjustments */
+@media screen and (max-width: 768px) {
+  .gallery img {
+      width: 180px;
+      height: 180px;
+  }
+
+  h1, h2 {
+      font-size: 2em;
+  }
+
+  .countdown {
+      font-size: 1.8em;
+  }
+
+  .btn {
+      font-size: 1.2em;
+  }
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.7), rgba(255, 105, 180, 0.7));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+  padding: 20px;
+} */
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #ff3366;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+  font-style: italic;
+}
+
+#love-list {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+#love-list li {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 12px 0;
+  line-height: 1.6;
+  text-align: left;
+  font-weight: 400;
+  padding-left: 35px;
+  position: relative;
+}
+
+#love-list li::before {
+  content: "❤️ ";
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  top: 0;
+}
+
+.btn {
+  background-color: #ff3366;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff1493;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
