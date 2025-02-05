@@ -1,159 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yummy Crossing</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>Your Love Story</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the days count section */
+        .days-count {
+            font-size: 2em;
+            font-weight: bold;
+            color: black; /* Set text color to black */
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h1>The Unplanned Love Story</h1>
+            <p>"Every moment with you is magical, and every heartbeat is a reminder of how blessed I am to have you in my life."</p><br
+            <p>"In your eyes, I found a home. In your smile, I discovered my purpose. Every moment spent with you is a page of a story I never could have imagined, yet one I wouldn't change for the world. Our love isn’t just something that happened—it’s the magic that surrounds us, the whispered promises, the stolen glances, and the quiet moments that speak louder than words ever could. With you, I am whole."</p>
+        </section>
 
-    <header>
-        <input class="search-bar" type="text" placeholder="Search..">
-        <a href="#Sign in">Sign in</a>
-        <a href="#Sign up">Sign up</a>
-    </header>
-    <hr>
+        <!-- Days Since 10th August 2024 Section -->
+        <section class="days-section">
+            <h2>Days Since 10th August 2024</h2>
+            <div class="days-count" id="days-count">Loading...</div>
+        </section>
 
-    <div class="logo"><img src="logo.png" alt="logo"></div>
-
-
-
-    <div class="nav">
-        <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Menus">Menus</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Team">Team</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
+        <a href="memory-lane.html" class="btn">Next</a>
     </div>
 
-    <div class="gallery">
+    <script>
+        window.onload = function() {
+            const startDate = new Date("Aug 10, 2024");
+            const now = new Date();
 
-        <div class="gallery_images">
-            <img src="image1.jpg" alt="Food">
-        </div>
+            // Debugging: Log both dates
+            console.log("Start Date: " + startDate);
+            console.log("Current Date: " + now);
 
-        <div class="gallery_images">
-            <img src="image2.jpg" alt="Food">
-        </div>
+            // Calculate the difference in time
+            const timeDiff = now - startDate;
 
-        <div class="gallery_images">
-            <img src="image3.jpg" alt="Food">
-        </div>
+            // Check if timeDiff is a valid number
+            if (!isNaN(timeDiff)) {
+                // Convert time difference from milliseconds to days
+                const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                
+                // Debugging: Log the number of days
+                console.log("Days Passed: " + daysPassed);
 
-        <div class="gallery_images">
-            <img src="image4.jpg" alt="Food">
-        </div>
-
-        <div class="gallery_images">
-            <img src="image2.jpg" alt="Food">
-        </div>
-
-    </div>
-
-    <main>
-        <div class="burger">
-            <h3>Newly Added Burgers</h3>
-            <div class="burger-item">
-                <img src="burger.jpg" alt="" height="120" width="120">
-
-                <div class="burger-item-body">
-                    <div class="burger-item-body__content">
-                        <h4>Content Title</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum nobis ducimus, dignissimos
-                            impedit
-                            mollitia aliquam inventore unde dolorem. Voluptas error soluta mollitia voluptatum non
-                            voluptate sit
-                            voluptatem minus perspiciatis commodi.
-                        </p>
-                    </div>
-
-                    <a href="#" class="burger-item-body__link">Continue Reading -></a>
-                </div>
-            </div>
-            <hr>
-            <div class="burger-item">
-                <img src="burger.jpg" alt="" height="120" width="120">
-
-                <div class="burger-item-body">
-                    <div class="burger-item-body__content">
-                        <h4>Content Title</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum nobis ducimus, dignissimos
-                            impedit
-                            mollitia aliquam inventore unde dolorem. Voluptas error soluta mollitia voluptatum non
-                            voluptate sit
-                            voluptatem minus perspiciatis commodi.
-                        </p>
-                    </div>
-
-                    <a href="#" class="burger-item-body__link">Continue Reading -></a>
-                </div>
-            </div>
-            <hr>
-            <div class="burger-item">
-                <img src="burger.jpg" alt="" height="120" width="120">
-
-                <div class="burger-item-body">
-                    <div class="burger-item-body__content">
-                        <h4>Content Title</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum nobis ducimus, dignissimos
-                            impedit
-                            mollitia aliquam inventore unde dolorem. Voluptas error soluta mollitia voluptatum non
-                            voluptate sit
-                            voluptatem minus perspiciatis commodi.
-                        </p>
-                    </div>
-
-                    <a href="#" class="burger-item-body__link">Continue Reading -></a>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="burger-menu">
-            <h3>Quick Search</h3>
-            <div class="burger-menu-image">
-                <div class="burger-menu-item">
-                    <div class="burger-menu-item__overlay">Breakfast</div>
-                    <img src="pizza.webp" alt="pizza" height="150" width="100%">
-                </div>
-
-                <div class="burger-menu-item">
-                    <div class="burger-menu-item__overlay">Lunch</div>
-                    <img src="pancakes.webp" alt="pancake">
-
-                </div>
-                <div class="burger-menu-item">
-                    <div class="burger-menu-item__overlay">Dinner</div>
-                    <img src="food.webp" alt="food">
-
-                </div>
-
-
-            </div>
-        </div>
-
-
-
-
-
-    </main>
-    
-    <br>
-    <hr>
-
-    <footer>Copyright &#169 2019 yummy crossing. All rights reserved</footer>
-
-
-
+                // Display the number of days
+                document.getElementById("days-count").innerHTML = `${daysPassed} days`;
+            } else {
+                console.error("Error: Invalid date calculation.");
+                document.getElementById("days-count").innerHTML = "Error calculating days.";
+            }
+        };
+    </script>
 </body>
-
 </html>
-
