@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiest Days ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle, rgba(255, 190, 209, 0.8), rgba(255, 105, 180, 0.6));
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-journey h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #d81b60;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart-shape {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 40px 0;
+            justify-content: center;
+            position: relative;
+        }
+
+        .heart-shape span {
+            display: inline-block;
+            margin: 5px;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            background-color: #ff66b2;
+            color: white;
+            border-radius: 20px;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .heart-shape span:hover {
+            transform: scale(1.2);
+            background-color: #ff3385;
+            cursor: pointer;
+        }
+
+        .heart-shape .special {
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        /* Animations */
+        @keyframes sparkle {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .sparkle {
+            display: inline-block;
+            font-size: 1.5em;
+            color: #ff4081;
+            animation: sparkle 1.5s infinite;
+        }
+
+        .special-moments {
+            margin-top: 40px;
+            text-align: left;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 200, 220, 0.9);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .special-moments h2 {
+            color: #d81b60;
+            font-size: 2em;
+        }
+
+        .special-moments ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .special-moments li {
+    font-size: 1.2em;
+    padding: 20px 0 10px 40px; /* Added extra padding to the left for text */
+    position: relative;
+    margin-bottom: 10px; /* Adds space between each list item */
+}
+
+.special-moments li::before {
+    content: '💖 ';
+    position: absolute;
+    left: -20px; /* Adjusted position further to create space from the text */
+    font-size: 1.7em; /* Slightly larger heart */
+    top: 50%; /* Align the heart vertically with the text */
+    transform: translateY(-50%); /* Fine-tunes vertical alignment */
+}
+
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #d81b60;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #b71c4a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="love-journey">
+            <h1>Happiest Days ❤️</h1>
+            <h1>"Tu aati hai seene me, jab jab saanse bharta hu..Kaun tujhe yu pyaar karega, jaise mai karta hu ❤️"</h1>
+
+            <!-- Beautifully arranged dates -->
+            <div class="heart-shape">
+                <span>10th Aug</span><span>13th Aug</span><span>16th Aug</span><span>18th Aug</span><span>24th Aug</span>
+                <span>1st Sept</span><span>5th Sept</span><span>7th Sept</span><span>18th Sept</span><span>20th Sept</span>
+                <span>22nd Sept</span><span>23rd Sept</span><span>2nd Oct</span><span>6th Oct</span><span>9th Oct</span>
+                <span>10th Oct</span><span>11th Oct</span><span>20th Oct</span><span>21st Oct</span><span>26th Oct</span>
+                <span>2nd Nov</span><span>10th Nov</span><span>13th Nov</span><span>16th Nov</span><span>23rd Nov</span>
+                <span>26th Nov</span><span>1st Dec</span><span>3rd Dec</span><span>8th Dec</span><span>9th Dec</span>
+                <span>10th Dec</span><span>14th Dec</span><span>15th Dec</span><span>17th Dec</span><span>20th - 21st Dec</span>
+                <span>25th Dec</span><span>27th Dec</span><span>29th Dec</span>
+                <span>1st Jan</span><span>4th Jan</span><span>9th Jan</span><span>11th Jan</span><span>12th Jan</span>
+                <span>14th Jan</span><span>18th Jan</span><span>19th Jan</span><span>21st Jan</span><span>23rd Jan</span>
+                <span>29th Jan</span>
+            </div>
+
+            <!-- Special Moments -->
+            <div class="special-moments">
+                <h2>Special Moments 💖</h2>
+                <ul>
+                    <li><strong>26 - 30 Sept</strong> – Our magical Darjeeling trip ❤️</li>
+                    <li><strong>17th Dec</strong> – She expressed her feelings for me 🥹❤️ (Yes, she loves me! ❤️🥹)</li>
+                    <li><strong>20th - 21st Dec</strong> – We spent the whole night together ❤️</li>
+                    <li><strong>25th Dec</strong> – Went to Park Street Café 🎄☕</li>
+                    <li><strong>27th Dec</strong> – Space Jump day-out 🚀</li>
+                    <li><strong>29th Dec</strong> – Us time ❤️</li>
+                    <li><strong>1st Jan</strong> – La Felice Café, Newton Mela, and us time ❤️</li>
+                    <li><strong>4th Jan</strong> – Had us time ❤️ and then went to Mani Square</li>
+                    <li><strong>9th Jan</strong> – Went to South City Mall 🛍️</li>
+                    <li><strong>11th Jan</strong> – 5 months together ❤️ Picnic at Eco Park ❤️</li>
+                    <li><strong>12th Jan</strong> – Bought matching Crocs at Mani Square 🎀</li>
+                    <li><strong>14th Jan</strong> – Played at Timezone in Acropolis Mall 🎮</li>
+                    <li><strong>18th Jan</strong> – Dental date 🎀</li>
+                    <li><strong>19th Jan</strong> – Us time ❤️</li>
+                    <li><strong>21st Jan</strong> – Acropolis Mall</li>
+                    <li><strong>23rd Jan</strong> – Our first flight together! ❤️🎀😍</li>
+                    <li><strong>29th Jan</strong> – Us time ❤️</li>
+                </ul>
+            </div>
+
+            <a href="popup.html" class="btn">Next</a>
+        </section>
+    </div>
+</body>
+</html>
